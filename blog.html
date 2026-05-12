@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f8faf2;
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#ecefe6",
+                      "surface-bright": "#f8faf2",
+                      "secondary": "#605e58",
+                      "secondary-fixed": "#e6e2d9",
+                      "on-primary-fixed": "#002203",
+                      "outline": "#71796d",
+                      "on-surface": "#191d18",
+                      "on-primary-container": "#f7fff1",
+                      "on-secondary-fixed": "#1c1c16",
+                      "on-secondary-container": "#66645d",
+                      "primary-fixed": "#b2f3aa",
+                      "primary": "#2e682e",
+                      "primary-container": "#478245",
+                      "primary-fixed-dim": "#97d690",
+                      "on-error-container": "#93000a",
+                      "secondary-fixed-dim": "#cac6be",
+                      "surface-container-highest": "#e1e3db",
+                      "tertiary-fixed": "#ffd9e5",
+                      "inverse-primary": "#97d690",
+                      "on-tertiary-container": "#fffbff",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#d8dbd3",
+                      "on-tertiary-fixed-variant": "#752d4e",
+                      "tertiary": "#8f4264",
+                      "secondary-container": "#e6e2d9",
+                      "on-error": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "background": "#f8faf2",
+                      "on-surface-variant": "#41493e",
+                      "on-tertiary-fixed": "#3e0022",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#2e312c",
+                      "tertiary-container": "#ac5a7d",
+                      "inverse-on-surface": "#eff2e9",
+                      "surface-container-low": "#f2f5ec",
+                      "tertiary-fixed-dim": "#ffb0cd",
+                      "on-primary-fixed-variant": "#16521b",
+                      "outline-variant": "#c1c9bb",
+                      "surface-container-high": "#e6e9e1",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e1e3db",
+                      "error-container": "#ffdad6",
+                      "surface": "#f8faf2",
+                      "on-secondary-fixed-variant": "#484740",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-tint": "#306a30",
+                      "on-background": "#191d18"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "base": "8px",
+                      "margin-mobile": "20px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-desktop": "64px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "label-md": ["Be Vietnam Pro"],
+                      "body-lg": ["Be Vietnam Pro"],
+                      "headline-md": ["Be Vietnam Pro"],
+                      "headline-lg": ["Be Vietnam Pro"],
+                      "headline-lg-mobile": ["Be Vietnam Pro"],
+                      "headline-xl": ["Be Vietnam Pro"],
+                      "body-md": ["Be Vietnam Pro"]
+              },
+              "fontSize": {
+                      "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 border-b border-outline-variant/30">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<div class="text-headline-md font-headline-md text-primary tracking-tight">VieGarden</div>
+<div class="hidden md:flex items-center gap-8"><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Trang chủ</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Trang trại</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Về chúng tôi</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Blog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">AI Assistant</a></div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-[24px] font-label-md text-label-md hover:opacity-80 transition-opacity">
+            Bắt Đầu Canh Tác
+        </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="pt-40 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col items-center text-center max-w-3xl mx-auto">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-md text-label-md mb-6">Kết Nối Với Nguồn Thực Phẩm</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-6">Theo Dõi Từng Mầm Xanh Phát Triển Tại VieGarden</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Cập nhật những hình ảnh trực tiếp từ trang trại và câu chuyện từ những người nông dân tâm huyết. Chúng tôi mang trang trại đến ngay màn hình của bạn.</p>
+</div>
+</section>
+<!-- Blog Bento Grid -->
+<section class="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Article -->
+<div class="md:col-span-8 group relative overflow-hidden rounded-[24px] bg-white border border-outline-variant shadow-sm hover:shadow-xl transition-shadow duration-300">
+<div class="aspect-[16/9] overflow-hidden relative">
+<div class="absolute top-4 left-4 z-10 flex items-center gap-2 bg-error/90 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+<span class="w-2 h-2 bg-white rounded-full"></span> TRỰC TIẾP
+</div>
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A lush green community garden terrace at sunset, showcasing a modern architectural farm structure with vertical planting systems. The atmosphere is warm and golden, with high-end photography focus. The scene features vibrant green foliage against a soft beige and white architectural backdrop, embodying a luxury VieGarden lifestyle and sustainable future." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRxZp5EbTw89mBNx5dJwobka0iLLOUAbqiKyqtMbRc203nDEWGfmuB6C9PgrBJ-gIIuqMqMV42ChSvke7BIFKllKDd3L7pLNyxPGxWeqr0gjy7_D1VLLBMKzQ2FzGW8SVKo56M0zkTjPCzHIYQ7f7NNUQQl-93Fc0J0Fbo3zzjf72GHdquK33Uh59lilPosmD_fnof0C0speBsdmwanLq5DwpM-ARZXjtpRyzoqo1eToIDXX5YDV2ZQhbmj6GVQSOAeY1iyEthY8E"/>
+</div>
+<div class="p-8">
+<div class="flex gap-3 mb-4">
+<span class="font-label-md text-label-md text-primary">Giám Sát Trực Tiếp</span>
+<span class="font-label-md text-label-md text-on-surface-variant">12 Tháng 3, 2024</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4 group-hover:text-primary transition-colors">Tính Năng Live Camera: Xem Rau Của Bạn Lớn Lên Mỗi Ngày</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Không còn lo lắng về nguồn gốc thực phẩm. Với hệ thống camera 4K trực tuyến, khách hàng có thể theo dõi quá trình chăm sóc và thu hoạch tại khu vườn của mình bất cứ lúc nào...</p>
+<a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all" href="#">
+                        Xem Live Camera Ngay <span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+</a>
+</div>
+</div>
+<!-- Secondary Article -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="h-full bg-surface-container-low rounded-[24px] p-8 border border-outline-variant flex flex-col">
+<div class="flex-grow">
+<div class="flex gap-3 mb-4">
+<span class="font-label-md text-label-md text-tertiary">Trải Nghiệm Khách Hàng</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Minh Bạch Tuyệt Đối Qua Màn Ảnh Nhỏ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Hệ thống giám sát mới giúp bạn yên tâm hơn khi biết chính xác thời điểm cây được tưới nước và chăm sóc thủ công.</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant">
+<a class="text-primary font-bold" href="#">Xem Nhật Ký Vườn</a>
+</div>
+</div>
+<div class="h-full bg-primary-container text-on-primary-container rounded-[24px] p-8">
+<h3 class="font-headline-md text-headline-md mb-4 text-white">Tham Gia Cộng Đồng</h3>
+<p class="font-body-md text-body-md opacity-90 mb-6">Giao lưu trực tiếp với các trang trại thành viên và đặt hàng nông sản sạch ngay khi vừa thu hoạch.</p>
+<div class="relative">
+<input class="w-full bg-white/10 border-white/20 rounded-[12px] px-4 py-3 text-white placeholder:text-white/60 focus:ring-2 focus:ring-white outline-none" placeholder="Địa chỉ email" type="email"/>
+<button class="mt-4 w-full bg-white text-primary font-bold py-3 rounded-[12px] hover:bg-secondary-fixed transition-colors">Đăng Ký Tham Gia</button>
+</div>
+</div>
+</div>
+<!-- Regular Grid Items -->
+<div class="md:col-span-4 bg-white rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow">
+<div class="aspect-video relative">
+<div class="absolute top-2 right-2 bg-black/50 text-white p-1 rounded backdrop-blur-sm">
+<span class="material-symbols-outlined text-sm">visibility</span> <span class="text-[10px]">1.2k đang xem</span>
+</div>
+<img class="w-full h-full object-cover" data-alt="Close up detail of fresh organic microgreens growing in a high-tech indoor farm tray. Soft natural lighting emphasizes the vibrant green textures and water droplets. The background is a clean, minimal white laboratory setting, representing the intersection of nature and precision technology in VieGarden branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2YJX58Lptu1R43tjslOdY-tSNJhrmZX3Y1JJVl7yDVa_3sQgEDVw-TO_j1yjAE73kPDEZ8rxeGluqTU4bIZym1kLSH4mKqR3YlvKOXmp3LiyeFNxq9DxjXEdOdgZ5vmrQo4EfEN-LMPuChPiTl2sgG2VWQ7s5sHMJVmJt-2PSflxaVb668QEUIjamzfqBAWwKeArM1C5p6qv37XreHrjePVgVrDaxUrQDAVRnLbCorv2jHXGx2q9_ntPzj4kQ503JGLjB4m3Dabc"/>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 block">Cộng Đồng • 5 phút đọc</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Gặp Gỡ Nông Dân Của Bạn</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Cùng trò chuyện và tìm hiểu về tâm huyết của những người đang ngày đêm chăm sóc bữa ăn cho gia đình bạn.</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-white rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow">
+<div class="aspect-video">
+<img class="w-full h-full object-cover" data-alt="A sun-drenched wide angle shot of a expansive modern farm field with perfectly aligned rows of crops stretching towards the horizon. The lighting is early morning with a soft mist. The color palette is composed of natural greens, soft yellows, and crisp morning sky blues, suggesting high-end, large scale sustainable agriculture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe8fuYiVUhS2cakvEis6nRoTMJvl62SQszMPsYR7uCUfTKVkAkE13GvuGt5eL5P1XkJZ0Zv_MFi5AaClhF3K2g5rrGOqlRidYlKnW5MJ9YvhrOlwXXviaD157JaVFpu0DUgy5xGqXKJJRwW0gAypfsQgYUpRWp5oTzkxPQ_juATJXX3xJxxC3ZSHxD3qqw81lCfUiTHXwgBJc4vkHBVAMYU0iQ5qM9vxcTBp0r7iBwmR-GvywQlEteeFZvoZ4LuazsU_gBhHLf8ZQ"/>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 block">Thị Trường • 8 phút đọc</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Hành Trình Từ Vườn Đến Bàn Ăn</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Làm thế nào VieGarden rút ngắn thời gian vận chuyển nông sản xuống chỉ còn 2 giờ sau khi thu hoạch.</p>
+</div>
+</div>
+<div class="md:col-span-4 bg-white rounded-[24px] border border-outline-variant overflow-hidden hover:shadow-lg transition-shadow">
+<div class="aspect-video">
+<img class="w-full h-full object-cover" data-alt="Artistic botanical composition of various garden tools and fresh vegetables laid out on a clean, light beige stone surface. The lighting is diffused and editorial. The aesthetic is clean and minimal, emphasizing a tactile, organic, and premium gardening lifestyle consistent with VieGarden brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDifgA_SC8WmIybd5D9T1M8jV5NL0ki8-8EPezLVGXUUJmXhAIrDGLIW2Y0xqegO5kp3rIxYsddOydJ6lzsQLJb3vIM1A3H-86zhU2R1Rm9jUoKPLsb9JTzlxKSrIq5bptPfq0r_xBdzwqptGVrIGPvwFvWF7sQniJDULXjmssZV8xmAQIf0SaWKN4YppZpLvwliwHJYWjwvcX8F4YMWx5y87vAY4bqC1RJx1nuIT5QeGvSDDmYXXV7o8Ez-Q4nJdHwyGxQbsXbaho"/>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 block">Chia Sẻ • 4 phút đọc</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-4">Bí Quyết Giữ Rau Luôn Tươi Ngon</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Mẹo nhỏ từ cộng đồng VieGarden giúp bảo quản thực phẩm hữu cơ tại gia một cách hiệu quả nhất.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- New Community Interaction Section -->
+<section class="bg-surface-container py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div class="max-w-2xl">
+<span class="text-primary font-label-md text-label-md uppercase tracking-wider mb-4 block">Tham Gia Cộng Đồng</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Nơi Nông Dân &amp; Khách Hàng Kết Nối</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">Hơn 5,000 thành viên đang chia sẻ kinh nghiệm và đặt hàng nông sản trực tiếp từ các trang trại uy tín mỗi ngày.</p>
+</div>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-bold hover:shadow-lg transition-shadow">Vào Diễn Đàn Thảo Luận</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Community Card 1 -->
+<div class="bg-white p-8 rounded-[32px] border border-outline-variant hover:-translate-y-2 transition-transform">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-secondary-container rounded-full overflow-hidden">
+<img alt="User Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtMty1ApYUKG8NeNHoeDjTxwAx4JHFnt44Uj4bpBSt8-G4FAEWvF2TqiImu64imDm20emNIHeujEjPgKdMgQRfRca7pSXwvAojPmjdtLN5-qQsTPlc-UCySqOKpiMHUyf839cmFc63DmtCNbOW1zYmG0mpCEMxJFr69DKnCNzOpjM40vbxpFc_gFzqxX5gI5LMzmjfsUOV0sFsmnzKYwsOw34puRFGWCymnhQd7VmG5_4Yie8J77Nwdkv8onQJDI3xW3YR2CYOXg4"/>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">Minh Anh</h5>
+<p class="text-xs text-on-surface-variant">Khách hàng tại Quận 1</p>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant mb-6">"Thích nhất cảm giác mở app ra là thấy ngay rau mình đặt đang được các bác nông dân tưới nước qua Live Camera. Cảm giác cực kỳ yên tâm!"</p>
+<div class="flex gap-2">
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded">#RauSach</span>
+<span class="text-[10px] bg-primary/10 text-primary px-2 py-1 rounded">#LiveMonitoring</span>
+</div>
+</div>
+<!-- Community Card 2 -->
+<div class="bg-white p-8 rounded-[32px] border border-outline-variant hover:-translate-y-2 transition-transform">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-secondary-container rounded-full overflow-hidden">
+<img alt="User Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArNSOCht-GA-mwzgWw1o6sLRyyalTt9O62sjzNpktfbAqM3Xy9pQQ5h291pvcUGI9dnC1JNFqVygpWzcrLR-YTRQJRvwm_5n4MseelnKQkI62t4vSHUi9V-E2WFyD65wdreK7CkB4DpqBuUiML8tggeopTusJfEYI3G-xIfGwUEg3VD1joqtqgbD3tUju5-WKq6VrpuCZW0qYl4RWMj1smoamqTUJB_QAMe8VjnS85fO5SCMdau67yYqw5clb_7mBkyxGTvACAkVU"/>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">Bác Ba - Trang Trại Xanh</h5>
+<p class="text-xs text-on-surface-variant">Đối tác Trang trại</p>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant mb-6">"Từ khi có Live Camera, tôi nhận được nhiều lời hỏi thăm và động viên từ khách hàng hơn. Cảm giác mình đang trồng rau cho chính người thân vậy."</p>
+<div class="flex gap-2">
+<span class="text-[10px] bg-tertiary/10 text-tertiary px-2 py-1 rounded">#NongNghiepTuTam</span>
+<span class="text-[10px] bg-tertiary/10 text-tertiary px-2 py-1 rounded">#FarmerLife</span>
+</div>
+</div>
+<!-- Community Card 3 -->
+<div class="bg-white p-8 rounded-[32px] border border-outline-variant hover:-translate-y-2 transition-transform">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-secondary-container rounded-full overflow-hidden">
+<img alt="User Avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzER8dCPi-fnpQH5Q4qXI5vCT1yRte3CdLkxA1J_9RDbLYANc1wIVDyjEvCvdLZgSBr_G8_U6CCdJL_dIlkhR7nG3es2ZnZWqiJ2TAfV9Q6vrQBsxNE7vh73Pg7Ld36KYfKuk864Yb5X8BG44iaYNR1tCJhA8CSkXQpcdgxlCMxoIiRJxvgJvgpKP2EzhXK2AuZcy3bYtME6_uySo74hSrDETzL3zxvqn6YmQZ10QTHN-VDK3FvY9e_YROgmk6pm7t16NJleK27iU"/>
+</div>
+<div>
+<h5 class="font-bold text-on-surface">Hoàng Long</h5>
+<p class="text-xs text-on-surface-variant">Thành viên mới</p>
+</div>
+</div>
+<p class="font-body-md text-body-md italic text-on-surface-variant mb-6">"Vừa đặt hàng xong là thấy ngay thông báo trang trại bắt đầu đóng gói trên Live Stream. Dịch vụ minh bạch và hiện đại quá!"</p>
+<div class="flex gap-2">
+<span class="text-[10px] bg-secondary/10 text-secondary px-2 py-1 rounded">#MinhBach</span>
+<span class="text-[10px] bg-secondary/10 text-secondary px-2 py-1 rounded">#VieGarden</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-secondary-fixed py-section-gap px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap items-start">
+<!-- Contact Info & Map -->
+<div class="space-y-12">
+<div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Hãy cùng nhau phát triển.</h2>
+<p class="font-body-lg text-body-lg text-on-secondary-container mb-8">Cho dù bạn là đối tác trang trại tiềm năng hay một khách hàng đang tìm kiếm nguồn thực phẩm tin cậy, chúng tôi luôn sẵn sàng kết nối.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Hotline</p>
+<p class="font-headline-md text-headline-md text-on-surface">+1 (555) 438-2733</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant">Email</p>
+<p class="font-headline-md text-headline-md text-on-surface">hello@viegarden.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</div>
+<div class="flex gap-4 items-center">
+<a aria-label="Facebook" class="text-on-surface hover:text-primary transition-colors flex items-center" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a aria-label="TikTok" class="text-on-surface hover:text-primary transition-colors flex items-center" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.12-1.31a6.447 6.447 0 0 1-1.88-1.74v10.58c-.02 3.47-2.32 6.51-5.63 7.39-4.32 1.25-8.91-1.39-9.5-5.8-.46-3.47 1.55-6.86 4.84-7.84a6.41 6.41 0 0 1 2.37-.2v4.09a2.533 2.533 0 0 0-1.89.87c-.89.96-.94 2.5-.1 3.51.84 1.01 2.36 1.3 3.45.69 1.09-.61 1.71-1.84 1.71-3.1v-17z"></path></svg>
+</a>
+<a class="text-on-surface hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="text-on-surface hover:text-primary transition-colors" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Embedded Map Placeholder -->
+<div class="rounded-[24px] overflow-hidden shadow-sm h-[300px] bg-white border border-outline-variant relative">
+<div class="absolute inset-0 bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-60" data-alt="A stylized, minimal map rendering of a metropolitan area with green park highlights. The aesthetic is clean and simplified, using a palette of light grays and soft greens to match the VieGarden brand. It looks like a high-end interface element for location discovery." data-location="San Francisco" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpiuATXFh_YL8Jic8tSLFip4s7la_yY2Qe2yDbRQrmRmb-vglLYoM7noEbnPV81UR64Ny-UNTnuW8vq0cvxJAUaF0piuItMC9HBPkpUvx-8I1Nf4B7TU4xtk1xdBoFqdgs5AVLunXF2DiIDm89LaYvE8KNZRLyA7TahqxZjpBB8M3swNCeOckNcTLYS5Hxt_6ti5u9GiwmfPBwK7BTeDUZhPsvJgUQGg_muB1mhWA4h9Ue1mPavJtxaapDyN6AR_SZeQD6pEFEBYQ"/>
+<div class="absolute flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="location_on" data-weight="fill">location_on</span>
+<div class="bg-white px-4 py-2 rounded-full shadow-lg mt-2 font-label-md text-label-md text-on-surface">
+                                    VieGarden HQ, TP.HCM
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-white p-8 md:p-12 rounded-[24px] shadow-sm border border-outline-variant">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Họ Và Tên</label>
+<input class="w-full bg-[#F9F8F6] border-none rounded-[12px] px-4 py-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Địa Chỉ Email</label>
+<input class="w-full bg-[#F9F8F6] border-none rounded-[12px] px-4 py-4 focus:ring-2 focus:ring-primary outline-none transition-all" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Chủ Đề</label>
+<select class="w-full bg-[#F9F8F6] border-none rounded-[12px] px-4 py-4 focus:ring-2 focus:ring-primary outline-none transition-all">
+<option>Yêu Cầu Chung</option>
+<option>Đề Xuất Hợp Tác Trang Trại</option>
+<option>Yêu Cầu Tham Quan &amp; Trải Nghiệm</option>
+<option>Báo Chí &amp; Truyền Thông</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant">Tin Nhắn</label>
+<textarea class="w-full bg-[#F9F8F6] border-none rounded-[12px] px-4 py-4 focus:ring-2 focus:ring-primary outline-none transition-all resize-none" placeholder="Hãy cho chúng tôi biết chúng tôi có thể giúp gì cho bạn..." rows="6"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-[24px] font-label-md text-label-md hover:opacity-90 transition-all flex items-center justify-center gap-2" type="submit">
+                            Gửi Tin Nhắn <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="col-span-1 md:col-span-1">
+<div class="text-headline-md font-headline-md text-primary mb-6">VieGarden</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Kết nối cộng đồng thông qua nông nghiệp minh bạch và bền vững.</p>
+<div class="flex gap-4 mt-6">
+<a aria-label="Facebook" class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a aria-label="TikTok" class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.12-1.31a6.447 6.447 0 0 1-1.88-1.74v10.58c-.02 3.47-2.32 6.51-5.63 7.39-4.32 1.25-8.91-1.39-9.5-5.8-.46-3.47 1.55-6.86 4.84-7.84a6.41 6.41 0 0 1 2.37-.2v4.09a2.533 2.533 0 0 0-1.89.87c-.89.96-.94 2.5-.1 3.51.84 1.01 2.36 1.3 3.45.69 1.09-.61 1.71-1.84 1.71-3.1v-17z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-6">Khám Phá</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Live Camera</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Trang Trại Thành Viên</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cộng Đồng Thảo Luận</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-6">Hỗ Trợ</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Chính Sách Bảo Mật</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Liên Hệ Chúng Tôi</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Điều Khoản Dịch Vụ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-6">Bản Tin</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Nhận thông báo khi đến mùa thu hoạch.</p>
+<div class="flex gap-2">
+<input class="bg-white border-outline-variant rounded-[12px] px-3 py-2 text-sm focus:ring-1 focus:ring-primary outline-none flex-grow" placeholder="Email" type="text"/>
+<button class="bg-primary text-on-primary p-2 rounded-[12px]">
+<span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/30 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2026 VieGarden. Kết Nối Niềm Tin &amp; Lan Tỏa Hạnh Phúc qua VieGarden hiện đại.</p>
+</div>
+</footer>
+<!-- Floating AI Chat Widget -->
+<div class="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-4">
+<div class="bg-white p-4 rounded-2xl shadow-2xl border border-outline-variant max-w-[280px] mb-2 hidden md:block animate-bounce">
+<p class="text-sm font-medium text-on-surface">Chào bạn! Bạn muốn xem vườn rau nào qua Live Camera hôm nay? 🌱</p>
+</div>
+<button class="w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group relative">
+<span class="material-symbols-outlined text-3xl">smart_toy</span>
+<span class="absolute top-0 right-0 flex h-4 w-4">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-4 w-4 bg-tertiary"></span>
+</span>
+</button>
+</div></body></html>
