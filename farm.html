@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#ecefe6",
+                    "surface-bright": "#f8faf2",
+                    "secondary": "#605e58",
+                    "secondary-fixed": "#e6e2d9",
+                    "on-primary-fixed": "#002203",
+                    "outline": "#71796d",
+                    "on-surface": "#191d18",
+                    "on-primary-container": "#f7fff1",
+                    "on-secondary-fixed": "#1c1c16",
+                    "on-secondary-container": "#66645d",
+                    "primary-fixed": "#b2f3aa",
+                    "primary": "#2e682e",
+                    "primary-container": "#478245",
+                    "primary-fixed-dim": "#97d690",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#cac6be",
+                    "surface-container-highest": "#e1e3db",
+                    "tertiary-fixed": "#ffd9e5",
+                    "inverse-primary": "#97d690",
+                    "on-tertiary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#d8dbd3",
+                    "on-tertiary-fixed-variant": "#752d4e",
+                    "tertiary": "#8f4264",
+                    "secondary-container": "#e6e2d9",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8faf2",
+                    "on-surface-variant": "#41493e",
+                    "on-tertiary-fixed": "#3e0022",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2e312c",
+                    "tertiary-container": "#ac5a7d",
+                    "inverse-on-surface": "#eff2e9",
+                    "surface-container-low": "#f2f5ec",
+                    "tertiary-fixed-dim": "#ffb0cd",
+                    "on-primary-fixed-variant": "#16521b",
+                    "outline-variant": "#c1c9bb",
+                    "surface-container-high": "#e6e9e1",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e3db",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8faf2",
+                    "on-secondary-fixed-variant": "#484740",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#306a30",
+                    "on-background": "#191d18"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px",
+                    "card": "24px",
+                    "input": "12px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "label-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-xl": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .farm-card-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.06);
+        }
+        .farm-card-shadow:hover {
+            box-shadow: 0 20px 50px -12px rgba(46, 104, 46, 0.12);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 dark:bg-surface-dim/80 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">VieGarden</div>
+<nav class="hidden md:flex items-center gap-8"><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Trang chủ</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Trang trại</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Về chúng tôi</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Blog</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#ai-assistant">AI Assistant</a></nav>
+<div class="flex items-center gap-4">
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-3 rounded-full font-label-md text-label-md hover:opacity-80 transition-opacity">
+                Bắt Đầu Ngay
+            </button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-gap">
+<!-- Hero & Search Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-12">
+<div class="max-w-2xl">
+<span class="text-primary font-label-md text-label-md mb-4 block uppercase">Khám phá mạng lưới của chúng tôi</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 text-on-surface">Tìm Kiếm Trang Trại Bền Vững Gần Bạn</h1>
+<p class="text-body-lg text-on-surface-variant font-body-lg">Kết nối bạn với trái tim của nông nghiệp địa phương. Duyệt qua danh mục các trang trại ứng dụng công nghệ bền vững, cung cấp nông sản tươi sạch nhất cho cuộc sống của bạn.</p>
+</div>
+<div class="w-full md:max-w-md">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-input py-4 pl-12 pr-4 focus:ring-2 focus:ring-primary text-body-md font-body-md transition-all shadow-sm" placeholder="Tìm theo loại cây, địa điểm hoặc tên..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Filter Chips -->
+<div class="flex flex-wrap gap-3 overflow-x-auto pb-4 scrollbar-hide">
+<button class="bg-primary text-on-primary px-5 py-2 rounded-full font-label-md text-label-md whitespace-nowrap">Tất Cả</button>
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2 rounded-full font-label-md text-label-md hover:bg-outline-variant transition-colors whitespace-nowrap">Hữu Cơ</button>
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2 rounded-full font-label-md text-label-md hover:bg-outline-variant transition-colors whitespace-nowrap">Thủy Canh</button>
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2 rounded-full font-label-md text-label-md hover:bg-outline-variant transition-colors whitespace-nowrap">Nông Nghiệp Đô Thị</button>
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2 rounded-full font-label-md text-label-md hover:bg-outline-variant transition-colors whitespace-nowrap">Vườn Cây Ăn Trái</button>
+<button class="bg-secondary-container text-on-secondary-container px-5 py-2 rounded-full font-label-md text-label-md hover:bg-outline-variant transition-colors whitespace-nowrap">Dâu Tây &amp; Quả Mọng</button>
+</div>
+</section>
+<!-- Farm Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Farm Card 1 -->
+<div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Nông Trại Thung Lũng Xanh" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCznXhvGqEsEnBejvvSIR5G27Pu2CBteZGOC3FKUni9_0hyfnx1XpJaF6-FBWET3duA9SpAr2-n4V8Ra3XGT0HFw2gRoFrA1xFoaXE-gPU2hQJw6pb9KM761B6JecPGBuYR4NFLX4MX4Fb5JjgP493Tl8ZDvO2QZNNgW6JcViH9KJ0-AyQlMtZw5xzu_iNbtDuot3wDqTV_7Yutk4BDTK70XS6EZ4-FQ4rmpCMiScZ63MCVYuF6pbai_Dt_zgrAOQnlIkWkI2S2DPU"/>
+<div class="absolute top-4 right-4">
+<span class="bg-white/90 backdrop-blur-md text-primary px-3 py-1 rounded-full text-label-md font-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span> Đã Xác Minh
+                        </span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md">Đà Lạt, Việt Nam</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Farm Anh Đạt</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">Chuyên canh các loại rau củ quả hữu cơ theo tiêu chuẩn VietGAP, kết hợp mô hình nông nghiệp trải nghiệm cho gia đình và trẻ em tại Đà Lạt.</p>
+<a class="flex items-center justify-between group/btn text-primary font-label-md text-label-md pt-4 border-t border-outline-variant/30" href="farm-detail.html">
+<span>Xem Chi Tiết</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Farm Card 2 -->
+<div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Ốc Đảo Đô Thị" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvJJHemQtXL6PnwKwXX0opzpUx9ohd7EeABphDtfPzA1joTvPe4QjGA_UoQBdwvohSMtcQwT7piCxxYQiLdUQnAlC70uIWY2kFPnNqxaNFSVcTnm4kp0bQH7Zf_Fz8uqk1wiIpV0sn4eaHM5hM2TIq3753Qmv08dm8V7RLXLP-cZAjlPUUSvUOCLyb113Pxxnzhruxt2yb7schxx5NeOfO1oTn0Ps5TqRF3S2L9BBbt0ICBkohx4v_lzX_o3y0mwkC9aBJEewROzM"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md">Quận 2, TP. Hồ Chí Minh</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Ốc Đảo Thủy Canh Đô Thị</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">Tiên phong trong canh tác đứng, mang nông sản tươi từ vườn đến bàn ăn ngay tại trung tâm thành phố qua công nghệ khí canh tiên tiến.</p>
+<a class="flex items-center justify-between group/btn text-primary font-label-md text-label-md pt-4 border-t border-outline-variant/30" href="#">
+<span>Xem Chi Tiết</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Farm Card 3 -->
+<div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Cà Phê Cao Nguyên" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnQ3pt0sl38ntNVM_2R1-4wO-kmseSBw5cyTzzfU8daOM4QBmqiKuHCYWkgn7WaFl84tWutlupcxBzEjcT_zsn2B8UnHUINLrR9rEFN9nQnbYGW2RRtyeQQ9o-J2_xPcauyDn45STA9ECmK7vRD6lzECbnV-BZIMJYc5dkT85kXVktX-pibKWkQH6aVpMCAuymm5sdY652ELp-DVZlp8H6LYHXpG3SdJSR4f4ATErYdJOM1IjMw_sz5BhSFmRkofhUOVIMzaoNfFc"/>
+<div class="absolute top-4 right-4">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-label-md font-label-md">Đánh Giá Cao</span>
+</div>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md">Đắk Lắk, Tây Nguyên</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Cà Phê Cổ Cao Nguyên</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">Canh tác cà phê dưới bóng râm bền vững, tập trung vào đa dạng sinh học và bảo tồn hệ sinh thái địa phương song song với sản xuất hạt cà phê thượng hạng.</p>
+<a class="flex items-center justify-between group/btn text-primary font-label-md text-label-md pt-4 border-t border-outline-variant/30" href="#">
+<span>Xem Chi Tiết</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Farm Card 4 -->
+<div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Rau Xanh Công Nghệ" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzmiIvlraBEcZe8JdY3P7gXBxwIbsttXJFZSXjHtHGjoQf7gkF_MnNAe3VyT9LnGgjtaY6KWUhAImrYLTeiJT0lijHJ-L3-XZ5dEoR4cXOk1sVCwUEVjPX-9Yzqq_Vp8qAiJxuCqWgnUvVTzXIfNY96FKWnpU1UKNsyZ5qKFyiHp12g3HrS61XuiIDz7FfLT7R4SoyW-e4quXvr_HP4Da_SJZSLyGAy5bWkexkNfTHQE-NaJEgsN8ADcx5tv1X7ya1tHadziZMYr0"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md">Tỉnh Bình Dương</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Mạng Lưới Rau Xanh</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">Cơ sở sản xuất rau xanh trong nhà lớn nhất Việt Nam, sử dụng cảm biến IoT để tối ưu hóa sự phát triển và tối đa hóa hàm lượng dinh dưỡng.</p>
+<a class="flex items-center justify-between group/btn text-primary font-label-md text-label-md pt-4 border-t border-outline-variant/30" href="#">
+<span>Xem Chi Tiết</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Farm Card 5 -->
+<div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Vườn Trái Cây Đồng Bằng" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCOvEDK3JhYv2ilUxlrcUa3KmVEdiRdUMa4aTAK2bVip-IQ85LGjptk02CP0HeKE3buhKkEPBq8IP52gIxq3vSvSpe9P-5XBL7ltC5Ki-lkRcXMJjnXWnI0Cdx8uEmxKjv4fNQzhG0RwRyEbSzpLNfmjIQlmyEJCrEBmvq0BGWUGdLwf3CnfXvJVQat3bl6qE_Gm8NKm1jyc-3uYy_LvDjMcBtvvcWSRAbnXm-hSPg4vsiqCKy07HzCN8Dbj0MVBMr2QczGdCrqqw"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md">Bến Tre, Miền Tây</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Trái Cây Vàng Mekong</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">Bảo tồn kỹ thuật canh tác truyền thống vùng đồng bằng kết hợp với hậu cần sinh thái hiện đại cho những trái bưởi, cam ngon nhất khu vực.</p>
+<a class="flex items-center justify-between group/btn text-primary font-label-md text-label-md pt-4 border-t border-outline-variant/30" href="#">
+<span>Xem Chi Tiết</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Farm Card 6 -->
+<div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Trại Ong Mật" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtTALz_fRUIqr10YmoDKraTNn_M1_TpqHm6W_Rcm3GtkWqyXHpz3H4GHa2HVQw6FbkH5yhxOnn43ruCqXxDzXuqdzrypcLE6xsNY7R_mk7Hb3_7Gh2QQyoPKWYbX_zcbiie1Nn8gbEiTMfKZdcEzcoMu4kCIArCucTt6QvXwGUEZF_bSG9UKQvpHA_A-uM3f32lbW9T5nLTDIjB-B-qMxHIccqDGPU4hbU8giK7v0lEaHjyF1aZiYvolVJIX4CQMM9Ip-u1UoOMfo"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<div class="flex items-center gap-2 text-primary mb-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md">Tỉnh Lâm Đồng</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Mật Ong Thiên Đường</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">Tập trung vào bảo tồn loài ong và sản xuất mật ong hoa dại hữu cơ tại vùng cao nguyên trong lành của miền Trung Việt Nam.</p>
+<a class="flex items-center justify-between group/btn text-primary font-label-md text-label-md pt-4 border-t border-outline-variant/30" href="#">
+<span>Xem Chi Tiết</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="mt-section-gap flex flex-col items-center">
+<button class="bg-surface-container-low text-primary border-2 border-primary px-10 py-4 rounded-full font-label-md text-label-md hover:bg-primary hover:text-on-primary transition-all duration-300">
+                Xem Thêm Trang Trại
+            </button>
+<p class="mt-6 text-on-surface-variant font-body-md">Đang hiển thị 6 trên 142 trang trại bền vững</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-low dark:bg-surface-dim border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="md:col-span-1">
+<div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim mb-6">VieGarden</div>
+<p class="text-on-surface-variant font-body-md leading-relaxed">Kết nối cộng đồng với nông nghiệp bền vững. Sứ mệnh của VieGarden là mang nông sản sạch từ trang trại đến mọi gia đình Việt thông qua công nghệ hiện đại.</p>
+<div class="flex items-center gap-4 mt-6">
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.17-2.86-.6-4.12-1.31a6.342 6.342 0 0 1-1.84-1.52c-.03 4.7-.02 9.4-.04 14.1-.01 2.1-.55 4.23-1.88 5.85-1.62 2.04-4.24 3.09-6.75 2.92-2.58-.12-5.02-1.42-6.38-3.61-1.47-2.31-1.68-5.32-.57-7.75 1.01-2.29 3.25-3.95 5.73-4.18.15-.01.3-.02.45-.02v4.11c-.96.11-1.95.42-2.69 1.08-.94.81-1.39 2.09-1.22 3.31.13 1.1.75 2.13 1.67 2.75.95.66 2.16.81 3.28.53 1.14-.25 2.14-.99 2.67-2.01.42-.77.58-1.65.57-2.52-.01-4.78-.01-9.56-.01-14.34z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Liên Kết Nhanh</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Về Dự Án</a></li>
+<li><a class="text-primary dark:text-primary-fixed-dim font-semibold font-body-md" href="#">Các Trang Trại</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Tính Bền Vững</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Chính Sách Bảo Mật</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Hỗ Trợ</h4>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Liên Hệ</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Trung Tâm Trợ Giúp</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Điều Khoản Dịch Vụ</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Câu Hỏi Thường Gặp</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-6">Bản Tin</h4>
+<p class="text-on-surface-variant font-body-md mb-4">Cập nhật những tin tức tươi mới từ khu vườn của chúng tôi.</p>
+<div class="flex flex-col gap-3">
+<input class="bg-surface border-none rounded-input py-3 px-4 focus:ring-2 focus:ring-primary" placeholder="Địa chỉ Email" type="email"/>
+<button class="bg-primary text-on-primary py-3 rounded-full font-label-md text-label-md hover:opacity-90 transition-opacity">Đăng Ký</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline-variant/30 text-center md:text-left">
+<p class="text-on-surface-variant font-body-md">© 2026 VieGarden. Nuôi dưỡng niềm tin và đổi mới thông qua nông nghiệp bền vững.</p>
+</div>
+</footer>
+<!-- FAB -->
+<div class="fixed bottom-8 right-8 z-40 flex flex-col items-end gap-2">
+<div class="bg-surface-container-highest text-on-surface-variant px-3 py-1 rounded-lg text-label-md shadow-sm border border-outline-variant animate-bounce mb-1">
+    Trợ lý AI đang trực tuyến
+  </div>
+<button class="bg-primary text-on-primary p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group">
+<span class="material-symbols-outlined text-[32px] group-hover:rotate-12 transition-transform" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</button>
+</div>
+</body></html>
