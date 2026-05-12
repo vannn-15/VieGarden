@@ -124,10 +124,11 @@
 <div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
 <div class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">VieGarden</div>
 <nav class="hidden md:flex items-center gap-8"><a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="#">Trang chủ</a>
-<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="index.html">Trang trại</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="AboutUs.htm;">Về chúng tôi</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="index.htl">Trang trại</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="AboutUs.html">Về chúng tôi</a>
 <a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="blog.html">Blog</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="AiAssistant.html">AI Assistant</a></nav>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md" href="AiAssistant.html
+">AI Assistant</a></nav>
 <div class="flex items-center gap-4">
 <button class="md:hidden text-primary p-2">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
@@ -167,59 +168,29 @@
 <!-- Farm Grid -->
 <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-<!-- Farm Card -->
+<!-- Farm Card 1 -->
 <div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
-<!-- Image -->
- <div class="relative aspect-[4/3] overflow-hidden">
-<img 
-alt="Farm Anh Đạt"
- class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCznXhvGqEsEnBejvvSIR5G27Pu2CBteZGOC3FKUni9_0hyfnx1XpJaF6-FBWET3duA9SpAr2-n4V8Ra3XGT0HFw2gRoFrA1xFoaXE-gPU2hQJw6pb9KM761B6JecPGBuYR4NFLX4MX4Fb5JjgP493Tl8ZDvO2QZNNgW6JcViH9KJ0-AyQlMtZw5xzu_iNbtDuot3wDqTV_7Yutk4BDTK70XS6EZ4-FQ4rmpCMiScZ63MCVYuF6pbai_Dt_zgrAOQnlIkWkI2S2DPU"
- />
-  <!-- Verified Badge -->
+<div class="relative aspect-[4/3] overflow-hidden">
+<img alt="Nông Trại Thung Lũng Xanh" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCznXhvGqEsEnBejvvSIR5G27Pu2CBteZGOC3FKUni9_0hyfnx1XpJaF6-FBWET3duA9SpAr2-n4V8Ra3XGT0HFw2gRoFrA1xFoaXE-gPU2hQJw6pb9KM761B6JecPGBuYR4NFLX4MX4Fb5JjgP493Tl8ZDvO2QZNNgW6JcViH9KJ0-AyQlMtZw5xzu_iNbtDuot3wDqTV_7Yutk4BDTK70XS6EZ4-FQ4rmpCMiScZ63MCVYuF6pbai_Dt_zgrAOQnlIkWkI2S2DPU"/>
 <div class="absolute top-4 right-4">
- <span class="bg-white/90 backdrop-blur-md text-primary px-3 py-1 rounded-full text-label-md font-label-md flex items-center gap-1">
-  <span 
-  class="material-symbols-outlined text-[18px]"
- style="font-variation-settings: 'FILL' 1;"
-   >
-    verified
-   </span>
-    Đã Xác Minh
-    </span>
+<span class="bg-white/90 backdrop-blur-md text-primary px-3 py-1 rounded-full text-label-md font-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span> Đã Xác Minh
+                        </span>
 </div>
 </div>
- <!-- Content -->
- <div class="p-8 flex flex-col flex-grow">
-<!-- Location -->
+<div class="p-8 flex flex-col flex-grow">
 <div class="flex items-center gap-2 text-primary mb-2">
-<span class="material-symbols-outlined text-[18px]">
-  location_on
-</span>
-<span class="font-label-md text-label-md">
-  Đà Lạt, Việt Nam
- </span>
+<span class="material-symbols-outlined text-[18px]" data-icon="location_on">location_on</span>
+<span class="font-label-md text-label-md">Đà Lạt, Việt Nam</span>
 </div>
-<!-- Title -->
-<h3 class="font-headline-md text-headline-md text-on-surface mb-3">
-  Farm Anh Đạt
-</h3>
-<!-- Description -->
-<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">
- Chuyên canh các loại rau củ quả hữu cơ theo tiêu chuẩn VietGAP, kết hợp mô hình nông nghiệp trải nghiệm cho gia đình và trẻ em tại Đà Lạt.
- </p>
- <!-- Arrow Link -->
- <div class="flex justify-end pt-4 border-t border-outline-variant/30">
- <a href="farmaDat.html">
-<span class="material-symbols-outlined text-primary transition-transform hover:translate-x-1 cursor-pointer">
-  arrow_forward
- </span>
- </a>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3">Farm Anh Đạt</h3>
+<p class="text-body-md text-on-surface-variant font-body-md mb-8 flex-grow line-clamp-3">Chuyên canh các loại rau củ quả hữu cơ theo tiêu chuẩn VietGAP, kết hợp mô hình nông nghiệp trải nghiệm cho gia đình và trẻ em tại Đà Lạt.</p>
+<a class="flex items-center justify-between group/btn text-primary font-label-md text-label-md pt-4 border-t border-outline-variant/30" href="farm-detail.html">
+<span>Xem Chi Tiết</span>
+<span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</a>
 </div>
 </div>
-  </div>
- </div>
- </section>
 <!-- Farm Card 2 -->
 <div class="group bg-surface-container-lowest rounded-card overflow-hidden farm-card-shadow transition-all duration-500 border border-outline-variant/30 flex flex-col">
 <div class="relative aspect-[4/3] overflow-hidden">
