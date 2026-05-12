@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#ecefe6",
+                    "surface-bright": "#f8faf2",
+                    "secondary": "#605e58",
+                    "secondary-fixed": "#e6e2d9",
+                    "on-primary-fixed": "#002203",
+                    "outline": "#71796d",
+                    "on-surface": "#191d18",
+                    "on-primary-container": "#f7fff1",
+                    "on-secondary-fixed": "#1c1c16",
+                    "on-secondary-container": "#66645d",
+                    "primary-fixed": "#b2f3aa",
+                    "primary": "#2e682e",
+                    "primary-container": "#478245",
+                    "primary-fixed-dim": "#97d690",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#cac6be",
+                    "surface-container-highest": "#e1e3db",
+                    "tertiary-fixed": "#ffd9e5",
+                    "inverse-primary": "#97d690",
+                    "on-tertiary-container": "#fffbff",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#d8dbd3",
+                    "on-tertiary-fixed-variant": "#752d4e",
+                    "tertiary": "#8f4264",
+                    "secondary-container": "#e6e2d9",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8faf2",
+                    "on-surface-variant": "#41493e",
+                    "on-tertiary-fixed": "#3e0022",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2e312c",
+                    "tertiary-container": "#ac5a7d",
+                    "inverse-on-surface": "#eff2e9",
+                    "surface-container-low": "#f2f5ec",
+                    "tertiary-fixed-dim": "#ffb0cd",
+                    "on-primary-fixed-variant": "#16521b",
+                    "outline-variant": "#c1c9bb",
+                    "surface-container-high": "#e6e9e1",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e1e3db",
+                    "error-container": "#ffdad6",
+                    "surface": "#f8faf2",
+                    "on-secondary-fixed-variant": "#484740",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#306a30",
+                    "on-background": "#191d18"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px",
+                    "24px": "24px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "label-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-xl": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.06);
+        }
+        body {
+            background-color: #f8faf2;
+            color: #191d18;
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-surface/80 dark:bg-surface-dim/80 transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-6">
+<span class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim tracking-tight">VieGarden</span>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Trang chủ</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Trang trại</a>
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim font-bold border-b-2 border-primary pb-1" href="#">Về chúng tôi</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#">Blog</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors" href="#ai-assistant">AI Assistant</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-24px font-label-md text-label-md hover:opacity-80 transition-opacity">
+            Bắt đầu trồng trọt
+        </button>
+</div>
+</nav>
+<main class="pt-[100px]">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap relative overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-4 py-1.5 rounded-full font-label-md text-label-md mb-6 inline-block">Câu chuyện của chúng tôi</span>
+<h1 class="font-headline-xl text-headline-xl text-on-surface mb-8">Kết nối cộng đồng qua từng hạt mầm xanh.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-[500px]">
+                    VieGarden không chỉ là công nghệ, mà là một hành trình kết nối con người với đất mẹ. Chúng tôi cùng nhau kể câu chuyện về sự sống và xây dựng cộng đồng nông nghiệp bền vững của tương lai.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-24px font-label-md text-label-md hover:opacity-90 transition-all">Tham gia cộng đồng</button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-24px font-label-md text-label-md hover:bg-primary/5 transition-all">Gặp gỡ nông dân</button>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-24px overflow-hidden ambient-shadow h-[600px] w-full">
+<img alt="Cộng đồng VieGarden" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMdVvlin6VmxqVoKTvoTzNigwq1FDgkmXTnr2m2icwvUOWyTl-GOqZyiUlOaqK3OzEIYgrH_XU3Hstx7ZKyvLBZMIR3_O_tqBWOUQK2ghx85wgKEaPqYtyox07KhqU2DIKPYX0k4fpL0Ai6IZyAsBo2ZkkCaOmJQB-Ef3PYoTEEe0kr8OZaslB5lhzFOg8xrt-j6_qc7LFABBHKUOOck4EaO2RSBqNO_h4M3d1-ot14r6pBZzJp_MykzLgbgQnXyOT1MTfUAojH9E"/>
+</div>
+<!-- Tactile Overlay Card -->
+<div class="absolute -bottom-10 -left-10 bg-white p-8 rounded-24px ambient-shadow max-w-[280px] hidden md:block">
+<span class="material-symbols-outlined text-primary text-[40px] mb-4" data-icon="groups">groups</span>
+<p class="font-headline-md text-headline-md text-on-surface leading-tight mb-2">5,000+</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Thành viên đang cùng nhau chia sẻ kinh nghiệm và niềm vui thu hoạch mỗi ngày.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Values (Bento-style Grid) -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Gắn kết bằng sự chân thực</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[600px] mx-auto">Chúng tôi tạo ra không gian để mọi người cùng học hỏi, chia sẻ và cùng nhau kiến tạo một hệ sinh thái thực phẩm sạch cho mọi nhà.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Mission Card -->
+<div class="md:col-span-2 bg-white p-12 rounded-24px ambient-shadow flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-tertiary mb-6 text-[32px]" data-icon="volunteer_activism">volunteer_activism</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Minh bạch qua giám sát trực tiếp</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Chúng tôi tin rằng niềm tin được xây dựng từ sự rõ ràng. Hệ thống giám sát trực tiếp cho phép cộng đồng cùng theo dõi hành trình của từng mầm cây, từ lúc gieo hạt cho đến khi đến tay người dùng, đảm bảo sự chính trực trong từng sản phẩm.</p>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high overflow-hidden">
+<img alt="Người dùng cộng đồng" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuZ-L5lkFQnHEDU62t1sEy0bac4Ly590Yfcfhqp0xtdDYHeXJX_zzDoB-WF4bfya9ADDCGJch4PJ1oVkkYHQXEjLY5CORA99wpGzqYJ1eiZMr38JnBiiEtjOz9HDs9jmVj5QkVEJMJLSbiPFU55lVDhshR3Y1EoIwHpAbuo8bIHGko4xW1t1OUZLQxU-9uutsAJBOXZ8Ox2vp4ssA54YtGushLTxVnleyOQw9yNyduMfkfnw9InZc5OD-h5XjYBv8V0ZFGVuHRkTQ"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-container-high overflow-hidden">
+<img alt="Người dùng cộng đồng" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaDJ262jPtfpRL0_7U1hX4qYwyicM4Y3q6kx6ia06hSCgzcczJ7jMHzgZT48FNwitOFXnmnVzcIioSSFdP7l8yqXf0A5jDF7nG-NjjD38TLKZDOwQCLy14eiKQrQUEPSFh7_fmYOz-uZEDKzAU89Ll7Bzov-j4W5EgXllqZEGMKCDaLSC4jhvSv8xHpO0s8Acs7v-aOR73PvO53FZh_yEH4hitvoelofrxGEdHGubg8iOJP-l81zYUgcKyn5T_q8mF1hhrOrYQZq4"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary text-on-primary flex items-center justify-center text-[12px] font-bold">
+                                +8k
+                            </div>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">Gia đình đã cùng chúng tôi thay đổi thói quen ăn uống xanh</span>
+</div>
+</div>
+<!-- Small Insight Card -->
+<div class="bg-primary-container p-10 rounded-24px text-on-primary-container flex flex-col justify-end min-h-[400px]">
+<span class="material-symbols-outlined text-white mb-4 text-[48px]" data-icon="forum">forum</span>
+<h3 class="font-headline-md text-headline-md mb-2">Giao lưu cộng đồng</h3>
+<p class="font-body-md text-body-md opacity-90">Tham gia các buổi thảo luận trực tiếp và workshop để cùng nhau hoàn thiện quy trình canh tác cộng đồng.</p>
+</div>
+<!-- Small Insight Card 2 -->
+<div class="bg-secondary-fixed p-10 rounded-24px text-on-secondary-fixed flex flex-col justify-end min-h-[400px]">
+<span class="material-symbols-outlined text-primary mb-4 text-[48px]" data-icon="visibility">visibility</span>
+<h3 class="font-headline-md text-headline-md mb-2">Giám sát mọi lúc</h3>
+<p class="font-body-md text-body-md opacity-80">Mọi thành viên đều có quyền truy cập luồng dữ liệu sống từ nông trại, tạo nên một môi trường mở và tin cậy tuyệt đối.</p>
+</div>
+<!-- Values Card -->
+<div class="md:col-span-2 bg-white p-12 rounded-24px border border-outline-variant">
+<div class="grid md:grid-cols-2 gap-10">
+<div>
+<h4 class="font-headline-md text-headline-md mb-4">Chia sẻ trải nghiệm</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Chúng tôi khuyến khích mỗi cá nhân kể lại câu chuyện làm nông của riêng mình, từ những khó khăn ban đầu đến niềm vui khi hái quả ngọt.</p>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-4">Tương tác thực tế</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Không chỉ là những con số, chúng tôi chú trọng vào sự tương tác giữa con người với nhau để cùng lan tỏa lối sống bền vững.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="md:w-1/3">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Hành trình sẻ chia</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Từ những người xa lạ cùng chung chí hướng đến một gia đình VieGarden lớn mạnh trên toàn quốc.</p>
+</div>
+<div class="md:w-2/3 space-y-12">
+<!-- Step 1 -->
+<div class="flex gap-8 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold font-headline-md text-headline-md">1</div>
+<div class="w-px h-full bg-outline-variant mt-4"></div>
+</div>
+<div class="pb-12">
+<span class="font-label-md text-label-md text-primary mb-2 block">Mùa xuân 2018</span>
+<h3 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">Kết nối đầu tiên</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bắt đầu từ nhóm nhỏ những người yêu vườn tại thành phố, cùng nhau chia sẻ những mẹo nhỏ để trồng rau trên ban công.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-8 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold font-headline-md text-headline-md">2</div>
+<div class="w-px h-full bg-outline-variant mt-4"></div>
+</div>
+<div class="pb-12">
+<span class="font-label-md text-label-md text-primary mb-2 block">Mùa hè 2020</span>
+<h3 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">Hình thành mạng lưới</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mở rộng thành cộng đồng kết nối các hộ gia đình với các chủ vườn nhỏ, xây dựng nền tảng tin cậy đầu tiên.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-8 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-primary flex items-center justify-center font-bold font-headline-md text-headline-md">3</div>
+</div>
+<div>
+<span class="font-label-md text-label-md text-primary mb-2 block">Mùa đông 2023</span>
+<h3 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">Lan tỏa giá trị</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Trở thành biểu tượng của sự minh bạch và cộng đồng tại Việt Nam, truyền cảm hứng cho hàng ngàn người tham gia vào nông nghiệp xanh.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Team Section -->
+<section class="bg-white py-section-gap border-y border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-16">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Những người bạn đồng hành</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Chúng tôi là đội ngũ tận tâm, luôn sẵn sàng lắng nghe và hỗ trợ cộng đồng trên mọi nẻo đường xanh.</p>
+</div>
+<a class="hidden md:flex items-center gap-2 text-primary font-label-md text-label-md hover:underline transition-all" href="#">
+                    Gia nhập cộng đồng <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Team Member 1 -->
+<div class="group">
+<div class="rounded-24px overflow-hidden mb-6 aspect-[4/5] bg-surface-container relative">
+<img alt="Elena - Điều phối cộng đồng" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCndPzkf7ky5e-Qg8SsNN-RywE7QYYOWNkqgurj-cSN1w1j5bEqt9FYs1bz6HkxWzQozb19GPwT3KmzZSfpc5klS945UDgugs3yv6nCgMkrVwskU5XHeAxcTT-K5fEUBQXqu1UOQ9Io-DF3vkC9_IC4gjOIMWhC_IQSawNB6Gs2RgR0XB0YJLPeg12SIix0mbyeOkKvuwHrC_OQyyaqvh4FQGi8JXmFjfSO7JGXO4SNuKuELR6rWdlTfZoojaBblz7tiCHS2PdwRNU"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<div class="flex gap-3">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+</a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">Elena Thorne</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Trưởng bộ phận Kết nối Cộng đồng</p>
+</div>
+<!-- Team Member 2 -->
+<div class="group">
+<div class="rounded-24px overflow-hidden mb-6 aspect-[4/5] bg-surface-container relative">
+<img alt="Marcus - Quản lý sự kiện" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGPXY2QZMZwAi9m1W1dEQj6_rKDKKwGLkIKAcGFqYpyq4B1gTYWWRfhlT-kG73cEBSd4uWx_9u9crh8rvafgHA9ZKBO5wZuhxqDRZ-vWdBfQzidBg3tmgysCEPZnYdvhW8F-OvozZmh7hDDlZ3Q-w5D0CnDgdcsgyU8_ZLMt0P0-H-UsfMMEWCDJkNqn0uaSCdHOk36tiG25Hhluh4qK-UCQ_x4nwODLnkWc2TZi3Ol3-8gT4J3A7XqiRdbED-IsKZHDJksDEd42Y"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<div class="flex gap-3">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+</a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">Marcus Vane</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Điều phối Sự kiện &amp; Tương tác</p>
+</div>
+<!-- Team Member 3 -->
+<div class="group">
+<div class="rounded-24px overflow-hidden mb-6 aspect-[4/5] bg-surface-container relative">
+<img alt="Sarah - Sáng tạo nội dung" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4seZgZqb-tzzsiuymeyYX2a4AIN2HcGmb3JHTFOT0yct6lZm5DrN9P_PnpM-ovdksKPxccj2_w1iRKkL_R0lmCZBwix4X6S5wgjTwR9q1cbECbCRPmU2UooIeXC1VL8VP-5jq-w8bvJha4UAgo82mNqY6H47EZAPm-5qigdoYus0k4yRjtCNd7oq7ZqIdTAZXxsnvRmpAMjG3NmFN8Lf27HY8ok1pARNgu7ltBHo4O2Dl_CLEJzVMhRp-8sUu4Oh6umVD_Z6j55E"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<div class="flex gap-3">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+</a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">Sarah Jenkins</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Quản lý Kể chuyện &amp; Nội dung</p>
+</div>
+<!-- Team Member 4 -->
+<div class="group">
+<div class="rounded-24px overflow-hidden mb-6 aspect-[4/5] bg-surface-container relative">
+<img alt="Liam - Người sáng lập" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNSv2F8Vn6QEL_ktENSEvyzLXt7VVnx8aEfQ2Z2jkzy95qNIWxclztISjanxF9OiU5R_brRqcg7AH_9sNQdoVY-x4iqNMw7C1xQoFzkyv2iQexca0Z2B0r_KkgMAMpLWIMYAdp5A58bbK3BZjHImqv0TRA8FcZqj7Rv0VWNeIjIE4_EcMMAiPRYHAkfC17YPMrc5Dja0cDEqa0hmWFlb3Wnwug628u1QJCyXEucuOWpTuUu17z1jX9S-cNGmEjqSFpBq76PAe-0E4"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<div class="flex gap-3">
+<a class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]" data-icon="link">link</span>
+</a>
+</div>
+</div>
+</div>
+<h4 class="font-headline-md text-headline-md mb-1">Liam Roth</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Người sáng lập &amp; Truyền cảm hứng</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="bg-surface-container rounded-24px p-12 md:p-24 text-center relative overflow-hidden">
+<div class="relative z-10">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-8">Viết tiếp câu chuyện cùng chúng tôi?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Tham gia vào cộng đồng VieGarden để cùng nhau tạo nên những thay đổi tích cực và tận hưởng thành quả từ sự minh bạch và chân thành.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-24px font-label-md text-label-md hover:scale-105 transition-transform">Trở thành thành viên</button>
+<button class="bg-white text-on-surface px-10 py-5 rounded-24px font-label-md text-label-md ambient-shadow hover:scale-105 transition-transform">Liên hệ cộng đồng</button>
+</div>
+<div class="flex justify-center gap-6 mt-12">
+<a class="text-primary hover:opacity-80 transition-opacity flex items-center gap-2" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="text-primary hover:opacity-80 transition-opacity flex items-center gap-2" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.032 2.617-.02 3.91-.006 1.36.014 3.082.205 4.41.676 2.174.774 3.7 2.3 4.47 4.47.47 1.32.66 3.05.674 4.41.015 1.35.015 2.7.01 4.06-.01 1.31-.03 2.61-.006 3.91-.014 1.36-.205 3.08-.676 4.41-.773 2.173-2.3 3.7-4.47 4.47-1.32.47-3.05.66-4.41.674-1.35.015-2.7.015-4.06.01-1.31-.01-2.61-.03-3.91-.006-1.36-.014-3.08-.205-4.41-.676-2.174-.773-3.7-2.3-4.47-4.47-.47-1.32-.66-3.05-.674-4.41-.015-1.35-.015-2.7-.01-4.06.01-1.31.03-2.61.006-3.91.014-1.36.205-3.08.676-4.41C2.333 2.33 3.86.8 6.03.03 7.35-.16 9.08-.15 10.44-.14c1.35.01 2.7.01 4.06.01h-1.975zM12.5 18.332c3.22 0 5.832-2.613 5.832-5.832 0-3.22-2.613-5.832-5.832-5.832-3.22 0-5.832 2.613-5.832 5.832 0 3.22 2.613 5.832 5.832 5.832zm0-2c-2.116 0-3.832-1.716-3.832-3.832s1.716-3.832 3.832-3.832 3.832 1.716 3.832 3.832-1.716 3.832-3.832 3.832zm6.25-10.416a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334z"></path></svg>
+</a>
+</div>
+</div>
+<!-- Abstract Deco -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full -ml-24 -mb-24"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-dim border-t border-outline-variant dark:border-outline">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<span class="text-headline-md font-headline-md text-primary dark:text-primary-fixed-dim block mb-6">VieGarden</span>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Nuôi dưỡng Niềm tin &amp; Sự gắn kết thông qua nông nghiệp minh bạch.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70" data-icon="public">public</span>
+<a class="text-primary hover:opacity-70 transition-opacity" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+<a class="text-primary hover:opacity-70 transition-opacity" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 448 512"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-6">Liên kết nhanh</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Về dự án</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Nông trại</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cộng đồng</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-6">Pháp lý</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Điều khoản dịch vụ</a></li>
+<li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Cài đặt Cookie</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-on-surface mb-6">Liên hệ</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">hello@viegarden.com</p>
+<p class="font-body-md text-body-md text-on-surface-variant">+1 (555) 234-5678</p>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 - 2026 VieGarden. Bảo lưu mọi quyền.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="language">language</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Việt Nam</span>
+</div>
+</div>
+</div>
+</footer>
+<div class="fixed bottom-8 right-8 z-[100] flex flex-col items-end">
+<!-- Chat Window -->
+<div class="mb-4 bg-white rounded-2xl shadow-2xl w-72 overflow-hidden border border-outline-variant flex flex-col animate-in slide-in-from-bottom-5 duration-500">
+<div class="bg-primary p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">smart_toy</span>
+</div>
+<div>
+<p class="text-white font-label-md text-label-md">VieGarden AI</p>
+<p class="text-white/70 text-[10px]">Trực tuyến</p>
+</div>
+</div>
+<button class="text-white/80 hover:text-white">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="p-4 h-48 bg-surface-container-lowest overflow-y-auto">
+<div class="bg-surface-container-high rounded-lg p-3 mb-4 max-w-[85%]">
+<p class="text-body-md text-on-surface-variant text-sm">Xin chào! Tôi là VieGarden AI. Tôi có thể giúp gì cho bạn về hành trình nông nghiệp xanh này?</p>
+</div>
+</div>
+<div class="p-3 border-t border-outline-variant bg-white flex items-center gap-2">
+<input class="flex-1 bg-surface-container-low border-none rounded-full px-4 py-2 text-sm focus:ring-1 focus:ring-primary" placeholder="Nhập tin nhắn..." type="text"/>
+<button class="text-primary">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest py-1 px-3 text-center">
+<p class="text-[10px] text-on-surface-variant/50">© 2026 VieGarden AI</p>
+</div>
+</div>
+<!-- Chat Toggle Button -->
+<button class="bg-primary text-on-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">chat</span>
+</button>
+</div>
+</body></html>
